@@ -8,17 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		ACAB4EE929BF332D00A2CFAB /* MoviePoolApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAB4EE829BF332D00A2CFAB /* MoviePoolApp.swift */; };
-		ACAB4EEB29BF332D00A2CFAB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAB4EEA29BF332D00A2CFAB /* ContentView.swift */; };
 		ACAB4EED29BF332E00A2CFAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACAB4EEC29BF332E00A2CFAB /* Assets.xcassets */; };
 		ACAB4EF029BF332E00A2CFAB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACAB4EEF29BF332E00A2CFAB /* Preview Assets.xcassets */; };
+		ACAB4EFD29BF7E0600A2CFAB /* MovieSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAB4EFC29BF7E0600A2CFAB /* MovieSearchView.swift */; };
+		ACAB4EFF29BF7E1400A2CFAB /* MovieSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAB4EFE29BF7E1400A2CFAB /* MovieSearchViewModel.swift */; };
+		ACAB4F0429BF824500A2CFAB /* BaseAPIClient in Frameworks */ = {isa = PBXBuildFile; productRef = ACAB4F0329BF824500A2CFAB /* BaseAPIClient */; };
+		ACAB4F0629BF824500A2CFAB /* OMDbClient in Frameworks */ = {isa = PBXBuildFile; productRef = ACAB4F0529BF824500A2CFAB /* OMDbClient */; };
+		ACAB4F0929BFA09500A2CFAB /* MovieItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAB4F0829BFA09500A2CFAB /* MovieItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		ACAB4EE529BF332D00A2CFAB /* MoviePool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviePool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACAB4EE829BF332D00A2CFAB /* MoviePoolApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePoolApp.swift; sourceTree = "<group>"; };
-		ACAB4EEA29BF332D00A2CFAB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		ACAB4EEC29BF332E00A2CFAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACAB4EEF29BF332E00A2CFAB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		ACAB4EF729BF339900A2CFAB /* BaseAPIClient */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = BaseAPIClient; sourceTree = "<group>"; };
+		ACAB4EF829BF397000A2CFAB /* OMDbClient */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = OMDbClient; sourceTree = "<group>"; };
+		ACAB4EFC29BF7E0600A2CFAB /* MovieSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchView.swift; sourceTree = "<group>"; };
+		ACAB4EFE29BF7E1400A2CFAB /* MovieSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchViewModel.swift; sourceTree = "<group>"; };
+		ACAB4F0729BF9F7000A2CFAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		ACAB4F0829BFA09500A2CFAB /* MovieItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieItemView.swift; sourceTree = "<group>"; };
+		ACAB4F0A29BFC9A800A2CFAB /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +36,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACAB4F0429BF824500A2CFAB /* BaseAPIClient in Frameworks */,
+				ACAB4F0629BF824500A2CFAB /* OMDbClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -35,8 +47,11 @@
 		ACAB4EDC29BF332D00A2CFAB = {
 			isa = PBXGroup;
 			children = (
+				ACAB4F0A29BFC9A800A2CFAB /* Config.xcconfig */,
+				ACAB4EF629BF338600A2CFAB /* Packages */,
 				ACAB4EE729BF332D00A2CFAB /* MoviePool */,
 				ACAB4EE629BF332D00A2CFAB /* Products */,
+				ACAB4F0229BF824500A2CFAB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,8 +66,9 @@
 		ACAB4EE729BF332D00A2CFAB /* MoviePool */ = {
 			isa = PBXGroup;
 			children = (
+				ACAB4F0729BF9F7000A2CFAB /* Info.plist */,
+				ACAB4EF929BF7D6800A2CFAB /* Features */,
 				ACAB4EE829BF332D00A2CFAB /* MoviePoolApp.swift */,
-				ACAB4EEA29BF332D00A2CFAB /* ContentView.swift */,
 				ACAB4EEC29BF332E00A2CFAB /* Assets.xcassets */,
 				ACAB4EEE29BF332E00A2CFAB /* Preview Content */,
 			);
@@ -65,6 +81,40 @@
 				ACAB4EEF29BF332E00A2CFAB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		ACAB4EF629BF338600A2CFAB /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				ACAB4EF829BF397000A2CFAB /* OMDbClient */,
+				ACAB4EF729BF339900A2CFAB /* BaseAPIClient */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		ACAB4EF929BF7D6800A2CFAB /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				ACAB4EFB29BF7DF100A2CFAB /* MovieSearch */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		ACAB4EFB29BF7DF100A2CFAB /* MovieSearch */ = {
+			isa = PBXGroup;
+			children = (
+				ACAB4EFC29BF7E0600A2CFAB /* MovieSearchView.swift */,
+				ACAB4EFE29BF7E1400A2CFAB /* MovieSearchViewModel.swift */,
+				ACAB4F0829BFA09500A2CFAB /* MovieItemView.swift */,
+			);
+			path = MovieSearch;
+			sourceTree = "<group>";
+		};
+		ACAB4F0229BF824500A2CFAB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +133,10 @@
 			dependencies = (
 			);
 			name = MoviePool;
+			packageProductDependencies = (
+				ACAB4F0329BF824500A2CFAB /* BaseAPIClient */,
+				ACAB4F0529BF824500A2CFAB /* OMDbClient */,
+			);
 			productName = MoviePool;
 			productReference = ACAB4EE529BF332D00A2CFAB /* MoviePool.app */;
 			productType = "com.apple.product-type.application";
@@ -137,8 +191,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACAB4EEB29BF332D00A2CFAB /* ContentView.swift in Sources */,
+				ACAB4F0929BFA09500A2CFAB /* MovieItemView.swift in Sources */,
+				ACAB4EFD29BF7E0600A2CFAB /* MovieSearchView.swift in Sources */,
 				ACAB4EE929BF332D00A2CFAB /* MoviePoolApp.swift in Sources */,
+				ACAB4EFF29BF7E1400A2CFAB /* MovieSearchViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +203,7 @@
 /* Begin XCBuildConfiguration section */
 		ACAB4EF129BF332E00A2CFAB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACAB4F0A29BFC9A800A2CFAB /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -207,6 +264,7 @@
 		};
 		ACAB4EF229BF332E00A2CFAB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACAB4F0A29BFC9A800A2CFAB /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -270,6 +328,7 @@
 				DEVELOPMENT_TEAM = TK6T4KEN3N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MoviePool/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +358,7 @@
 				DEVELOPMENT_TEAM = TK6T4KEN3N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MoviePool/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -339,6 +399,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ACAB4F0329BF824500A2CFAB /* BaseAPIClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = BaseAPIClient;
+		};
+		ACAB4F0529BF824500A2CFAB /* OMDbClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = OMDbClient;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ACAB4EDD29BF332D00A2CFAB /* Project object */;
 }
