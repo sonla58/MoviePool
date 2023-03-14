@@ -26,7 +26,7 @@ struct MovieItemView: View {
             case .success(let image):
                 image
                     .resizable()
-                    .aspectRatio(2/3, contentMode: .fill)
+                    .aspectRatio(2/3, contentMode: .fit)
                     .clipped()
             @unknown default:
                 EmptyView()
@@ -43,12 +43,14 @@ struct MovieItemView: View {
                         .font(.system(size: 12, weight: .regular))
                         .lineLimit(1)
                 }
-                .frame(maxWidth: .infinity)
+                .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(EdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8))
                 .background(.thickMaterial, in: Rectangle())
             }
             .frame(maxWidth: .infinity)
         }
+        .clipShape(RoundedRectangle(cornerRadius: 12))
+        .shadow(color: .black.opacity(0.13), radius: 12)
     }
 }
 

@@ -61,7 +61,6 @@ extension MovieSearchViewModel: View {
                     isLoading = true
                 }
                 searchTask?.cancel()
-                print("Load page: \(page)")
                 searchTask = searchMovie(query: text, page: page)
                     .receive(on: DispatchQueue.main)
                     .sink { com in

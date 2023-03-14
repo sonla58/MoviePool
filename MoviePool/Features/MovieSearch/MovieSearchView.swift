@@ -15,9 +15,8 @@ struct MovieSearchView: View {
     }
     
     var body: some View {
-        // Lazy Grid view with 2 columns with scrollable content, spacing and padding for each item in the grid view: 16
         ScrollView() {
-            LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 16, content: {
+            LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 22, content: {
                 ForEach(viewModel.movies) { movie in
                     MovieItemView(movie: movie)
                         .aspectRatio(2/3, contentMode: .fill)
@@ -30,7 +29,8 @@ struct MovieSearchView: View {
                     loadMoreView
                 }
             })
-            .padding(.horizontal, 16)
+            .padding(.horizontal, 22)
+            .padding(.vertical, 16)
         }
         .navigationTitle("Movie Search")
         .searchable(text: viewModel.$query)
